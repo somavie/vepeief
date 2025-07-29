@@ -1,4 +1,5 @@
 "use client"
+
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Checkbox } from "@/components/ui/checkbox"
@@ -54,7 +55,7 @@ export function VibrationPerceptionSection({ data, onChange }: VibrationPercepti
         </RadioGroup>
         {data.hasPerceivedVibrations === "Não" && (
           <p className="text-sm text-amber-600 bg-amber-50 p-3 rounded-md">
-            Se respondeu "Não", pode pular para a última seção (Comentários)
+            Se respondeu &quot;Não&quot;, pode pular para a última seção (Comentários)
           </p>
         )}
       </div>
@@ -76,7 +77,7 @@ export function VibrationPerceptionSection({ data, onChange }: VibrationPercepti
                       {option}
                     </Label>
                   </div>
-                ),
+                )
               )}
             </RadioGroup>
           </div>
@@ -84,7 +85,7 @@ export function VibrationPerceptionSection({ data, onChange }: VibrationPercepti
           <div className="space-y-3">
             <Label className="text-amber-800 font-medium">
               Em quais locais percebe as vibrações com mais intensidade?
-              <span className="text-sm font-normal text-amber-600">(Pode marcar várias opções)</span>
+              <span className="text-sm font-normal text-amber-600"> (Pode marcar várias opções)</span>
             </Label>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {vibrationLocations.map((location) => (
